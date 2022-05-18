@@ -24,4 +24,5 @@ private_key.json
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-main.js
+bundle.js
+main.css
