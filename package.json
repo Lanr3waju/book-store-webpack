@@ -1,5 +1,6 @@
 {
-  "name": "portfolio-project",
+  "name": "awesome-book-project",
+  "main": "index.js",
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
@@ -13,7 +14,9 @@
     "stylelint": "^14.x",
     "stylelint-config-recommended": "^6.x",
     "stylelint-config-standard": "^24.x",
-    "stylelint-csstree-validator": "^1.8.0"
+    "stylelint-csstree-validator": "^1.8.0",
+    "webpack": "^5.72.1",
+    "webpack-cli": "^4.9.2"
   },
   "scripts": {
     "format": "npx prettier  --write **/*.{html,json,md,json,yaml,yml,jsx}",
