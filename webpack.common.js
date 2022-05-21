@@ -4,6 +4,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const WorkboxWebpackPlugin = require('workbox-webpack-plugin');
 
 module.exports = {
   entry: [
@@ -30,6 +31,10 @@ module.exports = {
       // Automatically remove all unused webpack assets on rebuild
       cleanStaleWebpackAssets: true,
       protectWebpackAssets: false,
+    }),
+    new WorkboxWebpackPlugin.InjectManifest({
+      swSrc: './src/src-sw.js',
+      swDest: 'sw.js',
     }),
   ],
   optimization: {
