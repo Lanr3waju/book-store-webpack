@@ -1,4 +1,4 @@
-import { DateTime } from '../lib/luxon.js';
+import { DateTime } from 'luxon';
 
 class BookUi {
   constructor() {
