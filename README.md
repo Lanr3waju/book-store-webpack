@@ -28,6 +28,11 @@ This is a JavaScript project on building an app which stores books, add to the b
 - Made use of the `HTMLCollection` API with DOM selector `document.querySelectorAll()` to manipulate a list of elements with same class.
 - Implement `JS - Class` with static methids.
 
+- WEBPACK
+- Implement webpack with various plugins to bundle `js`, minify `css`, and create a `HTMl` template.
+- Split `webpack` config into two modes `production` and `development`.
+- Create a common webpack config and use a `webpack-merge` plugin to keep things `DRY` in production and development configs.
+
 - CSS
   - Pseudo-selectors (hover; to add hover effect to certain elements)
   - Pseudo-elements
