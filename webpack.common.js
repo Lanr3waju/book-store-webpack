@@ -6,6 +6,7 @@ const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const WorkboxWebpackPlugin = require('workbox-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
 
 module.exports = {
   entry: [
@@ -22,12 +23,8 @@ module.exports = {
     new OptimizeCSSAssetsPlugin({}),
     new CopyPlugin({
       patterns: [
-        { from: 'src/manifest.json', to: 'manifest.json' },
+        { from: 'src/img', to: 'img' },
       ],
-    }),
-    new HtmlWebpackPlugin({
-      template: './src/index.html',
-      filename: 'index.html',
     }),
     new CleanWebpackPlugin({
       // Simulate the removal of files
@@ -42,10 +39,15 @@ module.exports = {
       clientsClaim: true,
       skipWaiting: true,
     }),
+    new HtmlWebpackPlugin({
+      template: './src/index.html',
+      filename: 'index.html',
+    }),
   ],
   optimization: {
     minimizer: [
       new CssMinimizerPlugin(),
+      new TerserPlugin(),
     ],
     minimize: true,
   },
