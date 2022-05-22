@@ -22,12 +22,8 @@ module.exports = {
     new OptimizeCSSAssetsPlugin({}),
     new CopyPlugin({
       patterns: [
-        { from: 'src/manifest.json', to: 'manifest.json' },
+        { from: 'src/img', to: 'img' },
       ],
-    }),
-    new HtmlWebpackPlugin({
-      template: './src/index.html',
-      filename: 'index.html',
     }),
     new CleanWebpackPlugin({
       // Simulate the removal of files
@@ -41,6 +37,10 @@ module.exports = {
     new WorkboxWebpackPlugin.GenerateSW({
       clientsClaim: true,
       skipWaiting: true,
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/index.html',
+      filename: 'index.html',
     }),
   ],
   optimization: {
