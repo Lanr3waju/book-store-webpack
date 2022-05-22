@@ -5,6 +5,7 @@ const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const WorkboxWebpackPlugin = require('workbox-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   entry: [
@@ -19,6 +20,11 @@ module.exports = {
   plugins: [
     new MiniCssExtractPlugin({ filename: '[name].css' }),
     new OptimizeCSSAssetsPlugin({}),
+    new CopyPlugin({
+      patterns: [
+        { from: 'src/manifest.json', to: 'manifest.json' },
+      ],
+    }),
     new HtmlWebpackPlugin({
       template: './src/index.html',
       filename: 'index.html',
@@ -32,9 +38,9 @@ module.exports = {
       cleanStaleWebpackAssets: true,
       protectWebpackAssets: false,
     }),
-    new WorkboxWebpackPlugin.InjectManifest({
-      swSrc: './src/src-sw.js',
-      swDest: 'sw.js',
+    new WorkboxWebpackPlugin.GenerateSW({
+      clientsClaim: true,
+      skipWaiting: true,
     }),
   ],
   optimization: {
