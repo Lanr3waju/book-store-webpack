@@ -13,6 +13,7 @@
   "extends": ["airbnb-base"],
   "rules": {
     "class-methods-use-this": 0,
+    "allow": ["foo_", "_bar"],
     "max-classes-per-file": 0,
     "no-shadow": "off",
     "no-param-reassign": 0,
