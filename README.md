@@ -64,7 +64,7 @@ This is a PWA (Progressive Web Application) built with `JavaScript` and bundled 
 
 ## Live Demo
 
-[Live Demo Link](https://lanrewaju-e-lib.netlify.app/)
+[Live Demo Link](https://e-bookstore-pwa.netlify.app/)
 
 ### Development (Running locally)
 
