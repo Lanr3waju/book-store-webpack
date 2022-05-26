@@ -73,10 +73,10 @@ class BookUi {
 
   toggleRead = (element, read) => {
     if (read) {
-      element.textContent = 'You have read this book';
+      element.textContent = 'Book Read';
       element.classList.add('buttons');
     } else {
-      element.textContent = 'Try this book';
+      element.textContent = 'Try Book';
       element.classList.remove('buttons');
     }
   };
