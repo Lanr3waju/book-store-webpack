@@ -2,7 +2,7 @@
 
 > This is an e-library project, based primarily on `js` which implements features as; storage of books, adding of books and removal of books. It implements various `js` methods and API's.
 
-![screenshot](./img/awesome-books.png)
+![screenshot](./src/img/awesome-books.png)
 
 This is a PWA (Progressive Web Application) built with `JavaScript` and bundled with `webpack`, it utilizes the `luxon` library to display the local date & time,
 
