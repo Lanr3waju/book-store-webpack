@@ -28,6 +28,7 @@ This is a PWA (Progressive Web Application) built with `JavaScript` and bundled 
 - Made use of the `HTMLCollection` API with DOM selector `document.querySelectorAll()` to manipulate a list of elements with same class.
 - Implement `JS - Class` with static methids.
 
+<<<<<<< HEAD
 - Luxon
 - The Date & Time displayed in the page is gotten from the `Luxon` library
 
@@ -50,6 +51,8 @@ This is a PWA (Progressive Web Application) built with `JavaScript` and bundled 
 - Service Worker
 - Workbox Plugin is used to precache necessary URLS to enable site to work offline, so as to make it a fully Progressive Web App
 
+=======
+>>>>>>> main
 - CSS
   - Pseudo-selectors (hover; to add hover effect to certain elements)
   - Pseudo-elements
