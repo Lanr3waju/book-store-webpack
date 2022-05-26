@@ -4,7 +4,7 @@
 
 ![screenshot](./img/awesome-books.png)
 
-This is a JavaScript project on building an app which stores books, add to the books and remove from the stored books.
+This is a PWA (Progressive Web Application) built with `JavaScript` and bundled with `webpack`, it utilizes the `luxon` library to display the local date & time,
 
 ## Built With
 
@@ -27,6 +27,28 @@ This is a JavaScript project on building an app which stores books, add to the b
 - The `node.localStorage` `set()` & `get()` methods were used to store and retrieve user inouts.
 - Made use of the `HTMLCollection` API with DOM selector `document.querySelectorAll()` to manipulate a list of elements with same class.
 - Implement `JS - Class` with static methids.
+
+- Luxon
+- The Date & Time displayed in the page is gotten from the `Luxon` library
+
+- WEBPACK
+- Implement webpack with various plugins to bundle `js`, minify `css`, and create a `HTMl` template.
+- Split `webpack` config into two modes `production` and `development`.
+- Create a common webpack config and use a `webpack-merge` plugin to keep things `DRY` in production and development configs.
+- Load `DateTime` from `luxon` library.
+- The Google `workbox` plugin is used to precache application shell to make it work offline
+- Various webpack plugins were used for this project.
+
+  - HTMLWebpackPlugin
+  - MiniCssExtractPlugin
+  - OptimizeCSSAssetsPlugin
+  - CssMinimizerPlugin
+  - CleanWebpackPlugin
+  - WorkboxWebpackPlugin
+  - CopyPlugin
+
+- Service Worker
+- Workbox Plugin is used to precache necessary URLS to enable site to work offline, so as to make it a fully Progressive Web App
 
 - CSS
   - Pseudo-selectors (hover; to add hover effect to certain elements)
