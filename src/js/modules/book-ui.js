@@ -17,25 +17,25 @@ class BookUi {
   displayBook = ({ author, title, pages, id, read }) => {
     const ul = document.createElement('li');
     const bookCard = document.createElement('section');
+    bookCard.id = id;
     const bookCardUl = document.createElement('ul');
     const bookData = document.createElement('li');
     const bookPages = document.createElement('li');
     const removeButton = document.createElement('button');
     const readButton = document.createElement('button');
 
-    const addDomElementAttr = (elementName, elementClass, elementId, elementTextContent, value) => {
+    const addDomElementAttr = (elementName, elementClass, elementTextContent, value) => {
       elementName.className = elementClass;
-      elementName.id = elementId;
       elementName.textContent = elementTextContent;
       elementName.value = value;
     };
 
     addDomElementAttr(ul, 'parent-li');
-    addDomElementAttr(bookCard, 'book-ul', id);
+    addDomElementAttr(bookCard, 'book-ul');
     addDomElementAttr(bookCardUl, 'card-ul');
-    addDomElementAttr(bookData, 'li-class', '', `${title} by ${author}`);
-    addDomElementAttr(bookPages, 'li-class', '', `${pages} pages(s)`);
-    addDomElementAttr(removeButton, 'buttons', '', 'Remove', 'remove-btn');
+    addDomElementAttr(bookData, 'li-class', `${title} by ${author}`);
+    addDomElementAttr(bookPages, 'li-class', `${pages} pages(s)`);
+    addDomElementAttr(removeButton, 'buttons', 'Remove', 'remove-btn');
     addDomElementAttr(readButton, 'read');
 
     removeButton.setAttribute('data-action', 'remove-book');

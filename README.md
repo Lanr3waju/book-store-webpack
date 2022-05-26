@@ -46,6 +46,7 @@ This is a PWA (Progressive Web Application) built with `JavaScript` and bundled 
   - CleanWebpackPlugin
   - WorkboxWebpackPlugin
   - CopyPlugin
+  - TerserPlugin to minimze bundle size
 
 - Service Worker
 - Workbox Plugin is used to precache necessary URLS to enable site to work offline, so as to make it a fully Progressive Web App

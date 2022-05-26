@@ -161,7 +161,6 @@ body {
   font-style: italic;
   padding: 10px;
   margin: 0;
-  bottom: 0;
   display: block;
 }
 
@@ -216,7 +215,7 @@ input:focus {
 }
 
 .parent-li:nth-child(odd) {
-  background-color: gray;
+  background-color: #6a6767;
   color: white;
 }
 
@@ -293,8 +292,8 @@ input:focus {
 }
 
 .read {
-  background-color: #0fffef00;
-  border: none;
+  background-color: white;
+  border: 2px solid brown;
   font-family: "Comic Neue", cursive;
   padding: 5px;
   margin: 5px;
@@ -389,11 +388,11 @@ body::-webkit-scrollbar-thumb {
   }
 
   .buttons {
-    font-size: 0.8em;
+    font-size: 12px;
   }
 
   .read {
-    font-size: 0.8em;
+    font-size: 12px;
   }
 
   .add-book {
@@ -401,7 +400,7 @@ body::-webkit-scrollbar-thumb {
   }
 
   .card-ul {
-    font-size: 11px;
+    font-size: 12px;
   }
 
   .book-header {
