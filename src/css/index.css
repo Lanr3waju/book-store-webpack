@@ -306,7 +306,7 @@ input:focus {
 }
 
 .read:hover {
-  box-shadow: 2px 3px 5px 3px black;
+  box-shadow: 2px 3px 5px 3px #303030;
 }
 
 body::-webkit-scrollbar {
@@ -332,26 +332,16 @@ body::-webkit-scrollbar-thumb {
 .empty-book-alert {
   color: red;
   font-weight: bold;
-  animation: text 3s linear 0s infinite;
+  text-shadow: 1px 1px 1px gray;
 }
 
-@keyframes text {
-  0% {
-    text-shadow: 1px 1px 2px #bd2f2f;
-  }
-
-  50% {
-    text-shadow: 1px 1px 8px #7b0b0b;
-  }
-
-  100% {
-    text-shadow: 1px 1px 15px #bc2c0b;
-  }
+.border-green {
+  border: 2px solid #078507;
 }
 
 @keyframes box {
   0% {
-    box-shadow: 2px 2px 2px #440a0a;
+    box-shadow: 1px 2px 2px 3px #440a0a;
   }
 
   25% {

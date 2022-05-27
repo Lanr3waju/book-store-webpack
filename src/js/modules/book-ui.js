@@ -75,9 +75,11 @@ class BookUi {
     if (read) {
       element.textContent = 'Book Read';
       element.classList.add('buttons');
+      element.classList.add('border-green');
     } else {
       element.textContent = 'Try Book';
       element.classList.remove('buttons');
+      element.classList.remove('border-green');
     }
   };
 
