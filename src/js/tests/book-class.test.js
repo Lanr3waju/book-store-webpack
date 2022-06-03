@@ -45,19 +45,18 @@ describe('Instance of Book class', () => {
 });
 
 describe('Book class toggleRead method', () => {
-    const anotherBook = new Book({
-      author: 'Kyle Simpsons',
-      title: 'You Don\'t know JavaScript yet',
-      pages: 450,
-      read: true,
-      id: '560zsd',
-    });
-  
-    test('toggles read status of Book instance (anotherBook)', () => {
-        anotherBook.toggleRead()
-        expect(anotherBook.read).toBe(false);
-        anotherBook.toggleRead()
-        expect(anotherBook.read).toBe(true);
-
-    });
+  const anotherBook = new Book({
+    author: 'Kyle Simpsons',
+    title: 'You Don\'t know JavaScript yet',
+    pages: 450,
+    read: true,
+    id: '560zsd',
   });
+
+  test('toggles read status of Book instance (anotherBook)', () => {
+    anotherBook.toggleRead();
+    expect(anotherBook.read).toBe(false);
+    anotherBook.toggleRead();
+    expect(anotherBook.read).toBe(true);
+  });
+});

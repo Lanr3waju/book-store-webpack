@@ -4,5 +4,13 @@
   "rules": {
     "csstree/validator": true
   },
-  "ignoreFiles": ["build/**", "dist/**", "**/reset*.css", "**/bootstrap*.css", "**/luxon*.js"]
+  "ignoreFiles": [
+    "build/**",
+    "dist/**",
+    "coverage/**",
+    "**/reset*.css",
+    "**/bootstrap*.css",
+    "**/luxon*.js",
+    "**/jest*.configjs"
+  ]
 }

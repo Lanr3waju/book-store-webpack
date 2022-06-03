@@ -51,6 +51,9 @@ This is a PWA (Progressive Web Application) built with `JavaScript` and bundled 
 - Service Worker
 - Workbox Plugin is used to precache necessary URLS to enable site to work offline, so as to make it a fully Progressive Web App
 
+- JEST
+- Unit tests and integrated automated tests are wriiten for the functions and classes using jest
+
 - CSS
   - Pseudo-selectors (hover; to add hover effect to certain elements)
   - Pseudo-elements
