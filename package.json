@@ -3,12 +3,16 @@
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
-    "@babel/core": "7.x",
+    "@babel/core": "^7.18.2",
     "@babel/eslint-parser": "^7.x",
+    "@babel/plugin-transform-modules-commonjs": "^7.18.2",
+    "@babel/preset-env": "^7.18.2",
+    "babel-jest": "^28.1.0",
     "eslint": "^8.x",
     "eslint-config-airbnb-base": "^15.x",
     "eslint-plugin-import": "^2.25.4",
     "hint": "^6.1.0",
+    "jest": "^28.1.0",
     "prettier": "1.18.2",
     "style-loader": "^3.3.1",
     "stylelint": "^14.x",
@@ -21,6 +25,7 @@
     "webpack-fix-style-only-entries": "^0.6.1"
   },
   "scripts": {
+    "test": "jest --coverage",
     "start": "webpack serve --open --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js",
     "format": "npx prettier  --write **/*.{html,json,md,json,yaml,yml,jsx}",
