@@ -25,7 +25,7 @@
     "webpack-fix-style-only-entries": "^0.6.1"
   },
   "scripts": {
-    "test": "jest --coverage",
+    "test": "jest",
     "start": "webpack serve --open --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js",
     "format": "npx prettier  --write **/*.{html,json,md,json,yaml,yml,jsx}",
