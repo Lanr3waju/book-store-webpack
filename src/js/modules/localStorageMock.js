@@ -19,4 +19,4 @@ class LocalStorageMock {
     delete this.store[key];
   }
 }
- export default LocalStorageMock;
+export default LocalStorageMock;

@@ -1,7 +1,6 @@
-import LocalStorageMock from '../modules/localStorageMock.js'
+import LocalStorageMock from '../modules/localStorageMock.js';
 
 import Store from '../modules/store.js';
-
 
 beforeAll(() => {
   global.localStorage = new LocalStorageMock();
