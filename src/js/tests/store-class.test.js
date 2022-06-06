@@ -11,8 +11,8 @@ afterAll(() => {
   global.localStorage = new LocalStorageMock();
 });
 
-describe('Add method', () => {
-  test('add method return object', () => {
+describe('count method', () => {
+  test('Store class count method should return a number', () => {
     const newBook = new Store();
     expect(typeof newBook.count()).toBe('number');
   });
