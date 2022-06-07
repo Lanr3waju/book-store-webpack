@@ -2,11 +2,12 @@ import LocalStorageMock from '../modules/localStorageMock.js';
 import Store from '../modules/store.js';
 import Book from '../modules/book-class.js';
 
-beforeAll(() => {
+beforeEach(() => {
   global.localStorage = new LocalStorageMock();
 });
-afterAll(() => {
-  global.localStorage = new LocalStorageMock();
+
+afterEach(() => {
+  global.localStorage = undefined;
 });
 
 describe('Store Class Add Method', () => {
@@ -17,8 +18,7 @@ describe('Store Class Add Method', () => {
 
   test('Add method should create  an instance of a Book class and return it', () => {
     const newBook = new Store();
-    expect(newBook.add() instanceof Book).toBeTruthy();
-    expect(newBook.add() instanceof Store).toBeFalsy();
+    expect(newBook.add()).toBeInstanceOf(Book);
   });
 });
 describe('Store Class Count Method', () => {
@@ -28,13 +28,11 @@ describe('Store Class Count Method', () => {
     pages: 40,
   };
   test('Count method should return a number which is the indicates the number of objects(books) in the localStorage', () => {
-    global.localStorage.clear();
     const newBook = new Store();
     expect(typeof newBook.count()).toBe('number');
   });
 
   test('Count method should return the number of objects(books) in the localStorage', () => {
-    global.localStorage.clear();
     const newBook = new Store();
     newBook.add(book);
     newBook.add(book);
@@ -93,7 +91,6 @@ describe('Store Class remove Method', () => {
     id: 101,
   };
   test('remove method should remove the book with corresponding id', () => {
-    global.localStorage.clear();
     const removeBook = new Store();
     removeBook.add(book1);
     removeBook.add(book2);
