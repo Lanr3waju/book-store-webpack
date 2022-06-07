@@ -53,6 +53,7 @@ This is a PWA (Progressive Web Application) built with `JavaScript` and bundled 
 
 - JEST
 - Unit tests and integrated automated tests are wriiten for the functions and classes using jest
+- Mock localStorage API
 
 - CSS
   - Pseudo-selectors (hover; to add hover effect to certain elements)
