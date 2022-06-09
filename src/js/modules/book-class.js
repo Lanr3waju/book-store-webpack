@@ -1,6 +1,6 @@
 class Book {
   constructor({ author, title, pages, read = false, id = this.#generateID() }) {
-    if (Book.#isValid({ author, title, pages })) {
+    if (Book.isValid({ author, title, pages })) {
       this.author = author;
       this.title = title;
       this.pages = pages;
@@ -9,7 +9,7 @@ class Book {
     }
   }
 
-  static #isValid = ({ author, title, pages }) => typeof author === 'string'
+  static isValid = ({ author, title, pages }) => typeof author === 'string'
     && author.length > 0
     && typeof title === 'string'
     && title.length > 0
