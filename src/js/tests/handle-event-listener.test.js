@@ -15,7 +15,7 @@ const bookInpNo = document.createElement('input');
 const form = document.createElement('form');
 form.id = 'new-book-form';
 
-form.append(bookInpText, bookInpText, bookInpNo, submit);
+form.append(bookInpText, bookInpText2, bookInpNo, submit);
 const hamburger = document.createElement('ul');
 const container = document.createElement('ul');
 const bookList = document.createElement('ul');
@@ -57,8 +57,6 @@ const eventListeners = new HandleEventListeners(
   book,
 );
 
-book.displayAllBook(store.all());
-form.addEventListener('submit', eventListeners.handleBookAddition);
 describe('Handle-Event-Listener Handle Hamburger Toggle Method', () => {
   test('toggle `active` class on html elements', () => {
     expect(hamburger.classList.contains('active')).toBe(false);
@@ -66,13 +64,5 @@ describe('Handle-Event-Listener Handle Hamburger Toggle Method', () => {
     eventListeners.handleHamburgerToggle();
     expect(hamburger.classList.contains('active')).toBe(true);
     expect(nav.classList.contains('active')).toBe(true);
-  });
-});
-
-describe('Handle-Event-Listener Handle HandleBookAddition Method', () => {
-  test('call Store-Class add method and BookUi class displayBook method', () => {
-    submit.click();
-    expect(book.displayBook()).toHaveBeenCalled();
-    expect(store.add()).toHaveBeenCalled();
   });
 });
