@@ -40,9 +40,9 @@ class HandleEventListeners {
     this.addBookForm.classList.remove('new-book-form');
   };
 
-  updateBookNo = bookNo => this.newBook.updateBookNo(bookNo);
+  #updateBookNo = bookNo => this.newBook.updateBookNo(bookNo);
 
-  handleEmptyLibraryAlert = bookNo => {
+  #handleEmptyLibraryAlert = bookNo => {
     this.newBook.displayEmptyBookAlert(bookNo);
   };
 
@@ -58,8 +58,8 @@ class HandleEventListeners {
     this.inputBookTitle.value = '';
     this.inputBookPage.value = '';
     this.#toggleBookList();
-    this.handleEmptyLibraryAlert(this.storeFact.count());
-    this.updateBookNo(this.newBookNo());
+    this.#handleEmptyLibraryAlert(this.storeFact.count());
+    this.#updateBookNo(this.newBookNo());
   };
 
   #handleBookRemoval = (button) => {
@@ -67,8 +67,8 @@ class HandleEventListeners {
     const book = document.getElementById(parentId);
     book.parentElement.remove();
     this.storeFact.remove(parentId);
-    this.updateBookNo(this.newBookNo());
-    this.handleEmptyLibraryAlert(this.storeFact.count());
+    this.#updateBookNo(this.newBookNo());
+    this.#handleEmptyLibraryAlert(this.storeFact.count());
   };
 
   newBookNo = () => this.storeFact.count();
